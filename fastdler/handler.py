@@ -14,7 +14,7 @@ def compress(path):
             bz2.BZ2File(add_ext(path, ".bz2"), "wb") as fw,
         ):
             shutil.copyfileobj(fr, fw)
-        remove(change_dest)
+        remove(path)
 
 
 def duplicate(src, dest):
