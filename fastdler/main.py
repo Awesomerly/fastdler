@@ -28,6 +28,8 @@ def main():
             for change in changes:
                 change_type = change[0]
                 change_path = Path(change[1])
+                if change_path.suffix == ".nav":
+                    continue
 
                 relative_path = change_path.relative_to(args.source)
                 change_dest = args.dest / relative_path
