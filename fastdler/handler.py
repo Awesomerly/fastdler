@@ -27,6 +27,8 @@ def duplicate(src, dest):
 
 def remove(path):
     if path.is_dir():
+        print("Removing dir ", path)
         shutil.rmtree(path)
     if path.is_file():
+        print("Removing file ", path)
         os.remove(path)

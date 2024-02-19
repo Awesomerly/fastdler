@@ -12,13 +12,14 @@ args = parser.parse_args()
 
 
 def del_bz2(path):
-    if path.is_file():
+    if path.is_dir():
+        remove(path)
+    else:
         try:
             remove(add_ext(path, ".bz2"))
-        except:
             remove(path)
-    else:
-        remove(path)
+        except:
+            pass
 
 
 def main():
