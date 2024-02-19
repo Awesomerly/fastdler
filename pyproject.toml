@@ -1,0 +1,23 @@
+[project]
+name = "fastdler"
+version = "0.1.0"
+description = "Helps manage fastdls via a watch directory"
+authors = [
+    {name = "Awe", email = "Awesomerly@users.noreply.github.com"},
+]
+dependencies = [
+    "watchfiles>=0.21.0",
+]
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.scripts]
+fastdler = "fastdler.main:main"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
